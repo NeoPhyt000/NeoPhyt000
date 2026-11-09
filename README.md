@@ -19,10 +19,12 @@ Hi, I'm **Dibosh Sarker**, a Full Stack Web Developer and Computer Science & Eng
 
 I build modern, user-friendly web applications, from responsive interfaces to REST APIs and database-driven features. I enjoy turning ideas into real-world projects, exploring emerging technologies, and continuously sharpening my development skills.
 
-- 💼 **Role:** Full Stack Web Developer
-- 🎓 **Background:** Computer Science & Engineering
-- 🛠️ **Core stack:** React · Next.js · Node.js · MongoDB · Tailwind CSS · Python
-- 📍 **Location:** Dhaka
+- 🔭 **Currently working on:** [bazar-dor](https://github.com/NeoPhyt000/bazar-dor) and [fit-log](https://github.com/NeoPhyt000/fit-log)
+- 🌱 **Currently exploring:** Next.js and TypeScript for full stack web apps
+- 🎯 **Focus:** Building clean, responsive, user-friendly web applications
+- 💬 **Open to:** Collaboration, internships and learning from other developers
+- 📍 **Based in:** Dhaka, Bangladesh
+- 📫 **Reach me:** [diboshsarker45@gmail.com](mailto:diboshsarker45@gmail.com)
 
 </td>
     <td width="45%" align="center" valign="middle">
