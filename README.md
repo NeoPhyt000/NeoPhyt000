@@ -88,16 +88,8 @@ I build modern, user-friendly web applications, from responsive interfaces to RE
 <!-- PINNED:START -->
 <table>
   <tr>
-    <td width="50%" align="center">
-      <a href="https://github.com/NeoPhyt000/Portfolio-website">
-        <img src="https://github-readme-stats.shion.dev/api/pin/?username=NeoPhyt000&repo=Portfolio-website&theme=prussian&hide_border=false" alt="Portfolio-website" />
-      </a>
-    </td>
-    <td width="50%" align="center">
-      <a href="https://github.com/NeoPhyt000/Dev-Stack-Assignment05">
-        <img src="https://github-readme-stats.shion.dev/api/pin/?username=NeoPhyt000&repo=Dev-Stack-Assignment05&theme=prussian&hide_border=false" alt="Dev-Stack-Assignment05" />
-      </a>
-    </td>
+    <td width="50%" align="center"><a href="https://github.com/NeoPhyt000/Dev-Stack-Assignment05"><img src="https://github-readme-stats.shion.dev/api/pin/?username=NeoPhyt000&repo=Dev-Stack-Assignment05&theme=prussian&hide_border=false" alt="Dev-Stack-Assignment05" /></a></td>
+    <td width="50%" align="center"><a href="https://github.com/NeoPhyt000/bazar-dor"><img src="https://github-readme-stats.shion.dev/api/pin/?username=NeoPhyt000&repo=bazar-dor&theme=prussian&hide_border=false" alt="bazar-dor" /></a></td>
   </tr>
 </table>
 <!-- PINNED:END -->
