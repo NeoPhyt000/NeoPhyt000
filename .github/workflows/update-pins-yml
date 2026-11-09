@@ -1,0 +1,90 @@
+name: Update Pinned Repos
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"     # every 6 hours
+  workflow_dispatch:           # manual run button
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch pinned repos and update README
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: |
+          python - <<'PY'
+          import os, re, json, urllib.request
+
+          user = os.environ["GH_USER"]
+          token = os.environ["GH_TOKEN"]
+
+          query = """
+          query($login: String!) {
+            user(login: $login) {
+              pinnedItems(first: 6, types: REPOSITORY) {
+                nodes { ... on Repository { name } }
+              }
+            }
+          }
+          """
+          req = urllib.request.Request(
+              "https://api.github.com/graphql",
+              data=json.dumps({"query": query, "variables": {"login": user}}).encode(),
+              headers={
+                  "Authorization": "bearer " + token,
+                  "Content-Type": "application/json",
+                  "User-Agent": "pins-updater",
+              },
+          )
+          data = json.load(urllib.request.urlopen(req))
+          names = [n["name"] for n in data["data"]["user"]["pinnedItems"]["nodes"] if n]
+
+          if not names:
+              print("No pinned repos found, leaving README unchanged.")
+              raise SystemExit(0)
+
+          def card(n):
+              return (
+                  '<td width="50%" align="center">'
+                  f'<a href="https://github.com/{user}/{n}">'
+                  f'<img src="https://github-readme-stats.shion.dev/api/pin/?username={user}&repo={n}&theme=prussian&hide_border=false" alt="{n}" />'
+                  '</a></td>'
+              )
+
+          rows = []
+          for i in range(0, len(names), 2):
+              pair = names[i:i + 2]
+              cells = "\n    ".join(card(n) for n in pair)
+              if len(pair) == 1:
+                  cells += '\n    <td width="50%"></td>'
+              rows.append(f"  <tr>\n    {cells}\n  </tr>")
+
+          block = "<table>\n" + "\n".join(rows) + "\n</table>"
+
+          text = open("README.md", encoding="utf-8").read()
+          pattern = re.compile(r"(<!-- PINNED:START -->).*?(<!-- PINNED:END -->)", re.DOTALL)
+          new = pattern.sub(lambda m: m.group(1) + "\n" + block + "\n" + m.group(2), text)
+          open("README.md", "w", encoding="utf-8").write(new)
+          print("Pinned repos:", names)
+          PY
+
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: update pinned repos"
+            git push
+          fi
