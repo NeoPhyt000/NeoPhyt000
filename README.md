@@ -67,7 +67,7 @@ I build modern, user-friendly web applications, from responsive interfaces to RE
 <table>
   <tr>
     <td width="50%" align="center"><a href="https://github.com/NeoPhyt000/bazar-dor"><img src="https://github-readme-stats.shion.dev/api/pin/?username=NeoPhyt000&repo=bazar-dor&theme=prussian&hide_border=false" alt="bazar-dor" /></a></td>
-    <td width="50%" align="center"><a href="https://github.com/NeoPhyt000/fit-log"><img src="https://github-readme-stats.shion.dev/api/pin/?username=NeoPhyt000&repo=fit-log&theme=prussian&hide_border=false" alt="fit-log" /></a></td>
+    <td width="50%" align="center"><a href="https://github.com/NeoPhyt000/Dev-Stack-Assignment05"><img src="https://github-readme-stats.shion.dev/api/pin/?username=NeoPhyt000&repo=Dev-Stack-Assignment05&theme=prussian&hide_border=false" alt="Dev-Stack-Assignment05" /></a></td>
   </tr>
 </table>
 <!-- PINNED:END -->
