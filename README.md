@@ -82,7 +82,10 @@ I build modern, user-friendly web applications, from responsive interfaces to RE
 
 ## 📌 Pinned Projects
 
-<!-- To highlight another repo, copy one <a> block and change repo=YOUR_REPO_NAME -->
+## 📌 Pinned Projects
+
+<!-- Auto-updated from your GitHub pinned repositories (Customize your pins) -->
+<!-- PINNED:START -->
 <table>
   <tr>
     <td width="50%" align="center">
@@ -97,8 +100,7 @@ I build modern, user-friendly web applications, from responsive interfaces to RE
     </td>
   </tr>
 </table>
-
----
+<!-- PINNED:END -->
 
 ## 🐍 Contribution Activity
 
