@@ -109,8 +109,7 @@ I build modern, user-friendly web applications, from responsive interfaces to RE
   <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/NeoPhyt000/NeoPhyt000/output/github-snake-dark.svg" width="100%" />
 </picture>
 
-<!-- Daily commits / pushes graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=NeoPhyt000&theme=react-dark&hide_border=true&area=true" alt="Contribution graph" width="100%" />
+
 
 ---
 
